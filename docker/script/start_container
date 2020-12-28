@@ -1,0 +1,6 @@
+#!/bin/bash
+sudo docker run --name server1 -i --rm \
+--env "App.SimpleServer.max_connections = 10" \
+--env "App.SimpleServer.server_port = 8080" \
+--env "App.SimpleServer.http_root_path = /data/" \
+simpleserver:v1
